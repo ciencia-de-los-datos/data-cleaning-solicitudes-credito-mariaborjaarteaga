@@ -30,7 +30,8 @@ def clean_data():
     
     # Aplicar la función a la columna 'fecha'
     #df['fecha_de_beneficio'] = df['fecha_de_beneficio'].apply(unificar_fecha)
-    df.fecha_de_beneficio = pd.to_datetime(df["fecha_de_beneficio"], dayfirst=True)
+    #df.fecha_de_beneficio = pd.to_datetime(df["fecha_de_beneficio"], dayfirst=True)
+    df.fecha_de_beneficio = pd.to_datetime(df["fecha_de_beneficio"],format="mixed", dayfirst=True)
     
     
     df = df.apply(lambda x: x.astype(str).str.replace("_","-"))
