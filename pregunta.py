@@ -11,13 +11,13 @@ import pandas as pd
 
 def clean_data():
 
-    df = pd.read_csv("solicitudes_credito.csv", sep=";")
+    df = pd.read_csv("solicitudes_credito.csv", sep=";",index_col=0)
 
     #
     # Inserte su código aquí
     #
-    #Eeemplazar todas las letras a low_case
-    df = pd.read_csv(archivo_csv, delimiter=';',index_col=0)
+    #Reemplazar todas las letras a low_case
+
     df.dropna(inplace=True)
     
     #df.fecha_de_beneficio = pd.to_datetime(df["fecha_de_beneficio"], dayfirst=True)
